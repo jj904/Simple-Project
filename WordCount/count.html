@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="100">
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <div class='container'>
+    <h1>WORD Counter</h1> 
+    <h4>starting, or copay and paste your document here..</h4> 
+    <div id="textbox">
+        <textarea class="form-control" rows="10" id="jasoseol" onkeydown="counter();"></textarea>
+        <span id="count">(0/10000)</span>
+    </div>
+
+    <script>
+         //event (onkeydown) = action(counter()) 
+        function counter() {
+            var content = document.getElementById('jasoseol').value;
+            if (content.length > 10000) {
+                content = content.substring(0,10000);
+                document.getElementById('jasoseol').value = content;
+            }
+            document.getElementById('count').innerHTML = '(' + content.length + '/10000)';
+        }
+        counter();
+    </script>
+    </div>
+</body>
+</html>
