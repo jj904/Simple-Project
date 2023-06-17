@@ -1,6 +1,6 @@
 # Simple-Project
 
 ## 1. WordCount
-project description: Simple Count Words Website 
-Used HTML/CSS/JavaScript
-Deploy: 
+<p>project description: Simple Count Words Website </p>
+<p> Used HTML/CSS/JavaScript</p>
+<p>Deploy: </p>
